@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allsms count="2">
+	<sms address="10135" time="2 mars 2013 14:47:41" date="1362232061304" type="1" body="Test message" read="1" service_center="+33609001390" name=""/>
+	<sms address="10135" time="2 mars 2013 19:35:34" date="1362249334648" type="1" body="Test message 2" read="1" service_center="+33609001390" name=""/>
+</allsms>
