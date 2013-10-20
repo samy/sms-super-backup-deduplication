@@ -1,17 +1,5 @@
 var xmlContent;
-$(document).ready(function() {
-	$(document).on('click','#launch',function() {
-		$.ajax( {
-            type: "GET",
-            url: "sms_20131019231723.xml",
-            dataType: "xml",
-            success: function(xml) {
-				displaySMS(xml);
-			}
-        }
-      );    
-	});
-	
+$(document).ready(function() {	
 	$(document).on('dragenter', '#dropfile', function() {
             $(this).css('border', '3px dashed red');
             return false;
@@ -64,7 +52,7 @@ function deduplicateSMS(xmlSource) {
 	});
 	$(xmlSource).find('allsms').attr('count',total);
 	var blob = new Blob([XMLToString(xmlSource)], {type: "text/xml;charset=utf-8"});
-	saveAs(blob, "test.xml");
+	saveAs(blob, "sms.xml");
 }
 /* Source : http://www.maximechaillou.com/simple-upload-en-drag-and-drop-avec-html5-jquery-php/ */
 function upload(files) {
