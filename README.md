@@ -8,3 +8,4 @@ It uses :
 - FileSaver jQuery plugin (to offer file download feature in Javascript)
 
 Demo : http://lahaut.info/demos/sms-super-backup-deduplication/
+
