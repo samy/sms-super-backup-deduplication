@@ -21,11 +21,9 @@ $(document).ready(function() {
 	$(document).on('drop', '#dropfile', function(e) {
 		if(e.originalEvent.dataTransfer){
 			if(e.originalEvent.dataTransfer.files.length) {
-				// Stop the propagation of the event
 				e.preventDefault();
 				e.stopPropagation();
 				$(this).css('border', '3px dashed green');
-				// Main function to upload
 				upload(e.originalEvent.dataTransfer.files);
 			}  
 		}
@@ -59,11 +57,10 @@ function upload(files) {
 	var f = files[0] ;
 	var reader = new FileReader();
 
-	// When the image is loaded,
-	// run handleReaderLoad function
+	//The handleReaderLoad is used as a listener on onload event, to be fired at the end of the file upload
 	reader.onload = handleReaderLoad;
 
-	// Read in the image file as a data URL.
+	// Read in the image file as a text
 	reader.readAsText(f);            
 }
 function handleReaderLoad(evt) {
